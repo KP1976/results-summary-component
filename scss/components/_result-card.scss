@@ -1,0 +1,8 @@
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-300;
+
+  @import "../layout/header";
+  @import "../layout/result-card-footer";
+}

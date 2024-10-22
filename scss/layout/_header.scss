@@ -1,0 +1,47 @@
+.result-card {
+  &__header {
+    background: linear-gradient(
+      to bottom,
+      $light-slate-blue-background,
+      $light-royal-blue-background
+    );
+    border-radius: 0 0 $space-300 $space-300;
+    @include flex-column($space-300, center);
+    padding: $space-300 0 $space-500;
+  }
+
+  &__score-container {
+    @include flex-column($space-300, center);
+  }
+
+  &__title {
+    color: $light-lavender;
+    font-size: $font-size-225;
+  }
+
+  &__score {
+    @include flex-column(0, center);
+    background: linear-gradient(
+      to bottom,
+      $violet-blue-circle,
+      $persian-blue-circle
+    );
+    border-radius: 100%;
+    height: 8.875rem;
+    justify-content: center;
+    width: 8.875rem;
+  }
+
+  &__score-number {
+    color: $pale-blue;
+    display: block;
+    font-size: $font-size-725;
+    font-weight: 800;
+  }
+
+  &__score-max {
+    color: $light-slate-blue-background;
+    display: block;
+    font-weight: 700;
+  }
+}

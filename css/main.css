@@ -131,14 +131,13 @@ body {
   flex-direction: column;
   font-family: "Hanken Grotesk", sans-serif;
   min-height: 100dvh;
-  justify-content: flex-start;
+  justify-content: space-between;
   text-align: center;
 }
 
 main {
   align-items: center;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -167,4 +166,50 @@ main {
   font-style: normal;
   font-weight: 800;
   src: url("../assets/fonts/static/hanken-grotesk-v8-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.result-card .result-card__header {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 0 0 1.5rem 1.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 0 2.5rem;
+}
+.result-card .result-card__score-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.result-card .result-card__title {
+  color: hsl(241, 100%, 89%);
+  font-size: 1.125rem;
+}
+.result-card .result-card__score {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 100%;
+  height: 8.875rem;
+  justify-content: center;
+  width: 8.875rem;
+}
+.result-card .result-card__score-number {
+  color: hsl(221, 100%, 96%);
+  display: block;
+  font-size: 3.625rem;
+  font-weight: 800;
+}
+.result-card .result-card__score-max {
+  color: hsl(252, 100%, 67%);
+  display: block;
+  font-weight: 700;
 }

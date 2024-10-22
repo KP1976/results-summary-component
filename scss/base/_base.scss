@@ -12,14 +12,13 @@ body {
   flex-direction: column;
   font-family: $font-name;
   min-height: 100dvh;
-  justify-content: flex-start;
+  justify-content: space-between;
   text-align: center;
 }
 
 main {
   align-items: center;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   width: 100%;
