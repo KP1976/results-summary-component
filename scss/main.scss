@@ -1,3 +1,5 @@
-@import "reset";
-@import "1";
-@import "2";
+// Abstracts
+@import "abstracts/variables";
+
+// Base
+@import "base/reset";
