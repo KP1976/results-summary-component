@@ -44,4 +44,20 @@
     display: block;
     font-weight: 700;
   }
+
+  &__content {
+    @include flex-column($space-100, center);
+    width: 70%;
+  }
+
+  &__subtitle {
+    color: $pale-blue;
+    font-size: $font-size-300;
+    font-weight: 700;
+  }
+
+  &__description {
+    color: $light-lavender;
+    font-weight: 500;
+  }
 }

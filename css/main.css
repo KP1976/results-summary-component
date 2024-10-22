@@ -213,3 +213,19 @@ main {
   display: block;
   font-weight: 700;
 }
+.result-card .result-card__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 70%;
+}
+.result-card .result-card__subtitle {
+  color: hsl(221, 100%, 96%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.result-card .result-card__description {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+}
