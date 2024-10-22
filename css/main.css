@@ -125,12 +125,11 @@ body {
 
 body {
   align-items: center;
-  background-color: xxxxx;
-  color: xxxxxx;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 30%, 27%);
   display: flex;
   flex-direction: column;
   font-family: "Hanken Grotesk", sans-serif;
-  letter-spacing: xxxxxx;
   min-height: 100dvh;
   justify-content: flex-start;
 }

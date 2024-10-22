@@ -6,12 +6,11 @@ body {
 
 body {
   align-items: center;
-  background-color: xxxxx;
-  color: xxxxxx;
+  background-color: $white;
+  color: $dark-gray-blue;
   display: flex;
   flex-direction: column;
   font-family: $font-name;
-  letter-spacing: xxxxxx;
   min-height: 100dvh;
   justify-content: flex-start;
 }
