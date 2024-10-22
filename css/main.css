@@ -132,6 +132,16 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
   min-height: 100dvh;
   justify-content: flex-start;
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 /* hanken-grotesk-500 - latin */
