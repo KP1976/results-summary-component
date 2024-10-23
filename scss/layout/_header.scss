@@ -5,7 +5,7 @@
       $light-slate-blue-background,
       $light-royal-blue-background
     );
-    border-radius: 0 0 $space-300 $space-300;
+    border-radius: 0 0 $border-radius-400 $border-radius-400;
     @include flex-column($space-300, center);
     padding: $space-300 0 $space-500;
   }

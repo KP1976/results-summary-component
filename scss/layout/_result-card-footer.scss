@@ -1,0 +1,20 @@
+.result-card {
+  &__footer {
+    @include flex-column($space-300, center);
+    padding: 0 $space-375;
+  }
+
+  &__footer-title {
+    color: $dark-gray-blue;
+    font-size: $font-size-225;
+    font-weight: 700;
+    align-self: flex-start;
+  }
+
+  &__list {
+    @include flex-column($space-250, center);
+    width: 100%;
+  }
+}
+
+@import "../components/_result-summary-list-item";

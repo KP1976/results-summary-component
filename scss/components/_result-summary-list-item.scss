@@ -1,0 +1,49 @@
+.result-card {
+  &__list-item {
+    border-radius: $border-radius-100;
+    display: flex;
+    justify-content: space-between;
+    padding: $space-200;
+    width: 100%;
+
+    &--reaction {
+      @include summary-item-color($light-red);
+    }
+
+    &--memory {
+      @include summary-item-color($orange-yellow);
+    }
+
+    &--verbal {
+      @include summary-item-color($green-teal);
+    }
+
+    &--visual {
+      @include summary-item-color($cobalt-blue);
+    }
+  }
+
+  &__list-icon-container {
+    align-items: center;
+    display: flex;
+    gap: $space-150;
+  }
+
+  &__list-text {
+    font-weight: 700;
+  }
+
+  &__list-score {
+    color: $dark-gray-blue;
+    font-weight: 700;
+
+    &--light {
+      color: hsla(
+        hue($dark-gray-blue),
+        saturation($dark-gray-blue),
+        lightness($dark-gray-blue),
+        0.5
+      );
+    }
+  }
+}

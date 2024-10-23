@@ -4,3 +4,13 @@
   flex-direction: column;
   gap: $gap;
 }
+
+@mixin summary-item-color($color) {
+  background-color: hsla(
+    hue($color),
+    saturation($color),
+    lightness($color),
+    0.1
+  );
+  color: $color;
+}
