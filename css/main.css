@@ -290,3 +290,12 @@ main {
 .result-card__list-score--light {
   color: hsla(224, 30%, 27%, 0.5);
 }
+
+.result-card__button {
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 5rem;
+  color: hsl(221, 100%, 96%);
+  font-size: 1.125rem;
+  padding: 1rem 0;
+  width: 100%;
+}

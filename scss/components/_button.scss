@@ -1,0 +1,10 @@
+.result-card {
+  &__button {
+    background-color: $dark-gray-blue;
+    border-radius: 5rem;
+    color: $pale-blue;
+    font-size: $font-size-225;
+    padding: $space-200 0;
+    width: 100%;
+  }
+}
