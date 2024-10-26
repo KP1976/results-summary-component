@@ -139,8 +139,15 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100dvh;
   width: 100%;
+}
+@media (min-width: 736px) {
+  main {
+    justify-content: center;
+    flex: 1 1 auto;
+    min-height: initial;
+  }
 }
 
 /* hanken-grotesk-500 - latin */
@@ -167,10 +174,30 @@ main {
   font-weight: 800;
   src: url("../assets/fonts/static/hanken-grotesk-v8-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.attribution {
+  font-size: 0.875rem;
+  padding: 1.875rem 0 1rem;
+  text-align: center;
+}
+.attribution__link {
+  color: hsl(234, 85%, 45%);
+}
+
 .result-card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+@media (min-width: 736px) {
+  .result-card {
+    box-shadow: 0 1.5rem 2.5rem 0.5rem hsl(221, 100%, 96%);
+    border-radius: 2rem;
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    max-width: 736px;
+    width: 100%;
+  }
 }
 
 .result-card__header {

@@ -20,6 +20,12 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100dvh;
   width: 100%;
+
+  @include respond-to($breakpoint-medium) {
+    justify-content: center;
+    flex: 1 1 auto;
+    min-height: initial;
+  }
 }
