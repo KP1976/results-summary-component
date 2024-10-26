@@ -31,11 +31,19 @@
 
   &__list-text {
     font-weight: 700;
+
+    @include respond-to($breakpoint-medium) {
+      font-size: $font-size-225;
+    }
   }
 
   &__list-score {
     color: $dark-gray-blue;
     font-weight: 700;
+
+    @include respond-to($breakpoint-medium) {
+      font-size: $font-size-225;
+    }
 
     &--light {
       color: hsla(

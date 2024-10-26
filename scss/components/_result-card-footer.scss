@@ -2,6 +2,21 @@
   &__footer {
     @include flex-column($space-300, center);
     padding: 0 $space-375;
+
+    @include respond-to($breakpoint-medium) {
+      @include flex-column($space-500, center);
+      justify-content: center;
+      padding: 0 $space-500;
+    }
+  }
+
+  &__list-container {
+    @include flex-column($space-300, center);
+    width: 100%;
+
+    @include respond-to($breakpoint-medium) {
+      @include flex-column($space-375, center);
+    }
   }
 
   &__footer-title {
@@ -9,11 +24,19 @@
     font-size: $font-size-225;
     font-weight: 700;
     align-self: flex-start;
+
+    @include respond-to($breakpoint-medium) {
+      font-size: $font-size-300;
+    }
   }
 
   &__list {
     @include flex-column($space-250, center);
     width: 100%;
+
+    @include respond-to($breakpoint-medium) {
+      @include flex-column($space-200, center);
+    }
   }
 }
 
