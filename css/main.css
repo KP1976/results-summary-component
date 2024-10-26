@@ -209,15 +209,34 @@ main {
   gap: 1.5rem;
   padding: 1.5rem 0 2.5rem;
 }
+@media (min-width: 736px) {
+  .result-card__header {
+    border-radius: 2rem;
+    padding: 2.375rem 0 2.375rem;
+  }
+}
 .result-card__score-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+@media (min-width: 736px) {
+  .result-card__score-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.125rem;
+  }
+}
 .result-card__title {
   color: hsl(241, 100%, 89%);
   font-size: 1.125rem;
+}
+@media (min-width: 736px) {
+  .result-card__title {
+    font-size: 1.5rem;
+  }
 }
 .result-card__score {
   align-items: center;
@@ -225,10 +244,16 @@ main {
   flex-direction: column;
   gap: 0;
   background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
-  border-radius: 100%;
+  border-radius: 50%;
   height: 8.875rem;
   justify-content: center;
   width: 8.875rem;
+}
+@media (min-width: 736px) {
+  .result-card__score {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
 }
 .result-card__score-number {
   color: hsl(221, 100%, 96%);
@@ -236,10 +261,21 @@ main {
   font-size: 3.625rem;
   font-weight: 800;
 }
+@media (min-width: 736px) {
+  .result-card__score-number {
+    font-size: 4.5rem;
+    margin-bottom: -6px;
+  }
+}
 .result-card__score-max {
   color: hsl(252, 100%, 67%);
   display: block;
   font-weight: 700;
+}
+@media (min-width: 736px) {
+  .result-card__score-max {
+    font-size: 1.125rem;
+  }
 }
 .result-card__content {
   align-items: center;
@@ -248,14 +284,32 @@ main {
   gap: 0.5rem;
   width: 70%;
 }
+@media (min-width: 736px) {
+  .result-card__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+}
 .result-card__subtitle {
   color: hsl(221, 100%, 96%);
   font-size: 1.5rem;
   font-weight: 700;
 }
+@media (min-width: 736px) {
+  .result-card__subtitle {
+    font-size: 2rem;
+  }
+}
 .result-card__description {
   color: hsl(241, 100%, 89%);
   font-weight: 500;
+}
+@media (min-width: 736px) {
+  .result-card__description {
+    font-size: 1.125rem;
+  }
 }
 
 .result-card__footer {
