@@ -429,3 +429,13 @@ main {
   padding: 1rem 0;
   width: 100%;
 }
+@media (min-width: 736px) {
+  .result-card__button {
+    cursor: pointer;
+  }
+}
+@media (min-width: 736px) {
+  .result-card__button:hover {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  }
+}

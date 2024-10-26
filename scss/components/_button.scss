@@ -6,5 +6,19 @@
     font-size: $font-size-225;
     padding: $space-200 0;
     width: 100%;
+
+    @include respond-to($breakpoint-medium) {
+      cursor: pointer;
+    }
+
+    &:hover {
+      @include respond-to($breakpoint-medium) {
+        background: linear-gradient(
+          to bottom,
+          $light-slate-blue-background,
+          $light-royal-blue-background
+        );
+      }
+    }
   }
 }
