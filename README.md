@@ -1,97 +1,154 @@
-# Frontend Mentor - Results summary component
+# Results Summary Component
 
-![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Results Summary Component coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+## Overview
 
-Thanks for checking out this front-end coding challenge.
+This is a solution to the Results Summary Component challenge from [Frontend Mentor](https://www.frontendmentor.io). The project presents a responsive results card that displays a user's test scores across different categories, along with an overall score and ranking.
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Features
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+- Responsive design that adapts to desktop and mobile viewports
+- Dynamic score loading from JSON data
+- Interactive hover states on desktop
+- Gradient backgrounds and custom styling
+- Semantic HTML markup
+- Custom fonts using Hanken Grotesk
+- Modular SCSS architecture
+- BEM methodology for clear and maintainable CSS
 
-## The challenge
+## Built With
 
-Your challenge is to build out this results summary component and get it looking as close to the design as possible.
+- Semantic HTML5 markup
+- SCSS (Sass)
+- BEM methodology
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Vanilla JavaScript
+- JSON data
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## SCSS Architecture
 
-We provide the data for the results in a local `data.json` file. So you can use that to add the results and total score dynamically if you choose.
+The project uses a modular SCSS architecture organized into the following structure:
 
-Your users should be able to:
+```
+scss/
+├── abstracts/
+│   ├── _mixins.scss
+│   └── _variables.scss
+├── base/
+│   ├── _base.scss
+│   ├── _fonts.scss
+│   └── _reset.scss
+├── components/
+│   ├── _button.scss
+│   ├── _result-card-footer.scss
+│   ├── _result-card-header.scss
+│   ├── _result-card.scss
+│   └── _result-summary-list-item.scss
+├── layout/
+│   ├── _footer.scss
+│   └── main.scss
+```
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Use the local JSON data to dynamically populate the content
+### Architecture Details
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- **abstracts**: Contains project-wide Sass helpers
 
-## Where to find everything
+  - `_mixins.scss`: Reusable mixins for responsive design and common patterns
+  - `_variables.scss`: Global variables for colors, fonts, and breakpoints
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+- **base**: Contains the boilerplate code
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+  - `_base.scss`: Base styles and resets
+  - `_fonts.scss`: Font declarations and imports
+  - `_reset.scss`: Custom CSS reset
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- **components**: Contains all component-specific styles
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+  - Follows BEM naming convention for clear component structure
+  - Each component is isolated in its own partial
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+- **layout**: Contains global layout styles
+  - `_footer.scss`: Styles for the page footer
+  - `main.scss`: Main layout styles and imports
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+## BEM Methodology
 
-## Building your project
+The project follows the Block Element Modifier (BEM) methodology for consistent and maintainable CSS naming conventions. Example structure:
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```scss
+.result-card // Block
+.result-card__header // Element
+.result-card__list-item--reaction // Element with Modifier
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+## Layout
 
-## Deploying your project
+The component has two main layouts:
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+### Mobile (< 736px)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- Stacked layout with results and summary sections vertically aligned
+- Full-width design
+- Score circle and summary items optimized for smaller screens
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Desktop (≥ 736px)
 
-## Create a custom `README.md`
+- Side-by-side layout with results and summary sections
+- Fixed width (max-width: 736px)
+- Card-like appearance with shadow
+- Hover states on the continue button
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+## Technical Details
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Fonts
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+The project uses the Hanken Grotesk font family with three weights:
 
-## Submitting your solution
+- 500 (Medium)
+- 700 (Bold)
+- 800 (Extra Bold)
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Colors
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+#### Gradients
 
-## Sharing your solution
+- Background: `hsl(252, 100%, 67%)` to `hsl(241, 81%, 54%)`
+- Circle: `hsl(256, 72%, 46%)` to `hsla(241, 72%, 46%, 0)`
 
-There are multiple places you can share your solution:
+#### Category Colors
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- Reaction: `hsl(0, 100%, 67%)`
+- Memory: `hsl(39, 100%, 56%)`
+- Verbal: `hsl(166, 100%, 37%)`
+- Visual: `hsl(234, 85%, 45%)`
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### JavaScript Implementation
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+The application dynamically loads and displays score data from a JSON file. Each category is rendered with its own icon, score, and styling. The implementation includes:
 
-## Got feedback for us?
+- Asynchronous data loading
+- Dynamic DOM element creation
+- Error handling for failed data fetches
+- Custom styling based on category
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+## Local Development
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+To run this project locally:
 
-**Have fun building!** 🚀
+1. Clone the repository
+2. Install dependencies (if using a SCSS compiler)
+3. Run SCSS compiler (e.g., `sass --watch scss:css`)
+4. Open `index.html` in your browser
+5. To modify scores, edit the `data.json` file
+
+## Author
+
+- Frontend Mentor - [@KP1976](https://www.frontendmentor.io/profile/YourUsername)
+- Coded by Krzysztof Pawłowski
+
+## Acknowledgments
+
+Challenge by [Frontend Mentor](https://www.frontendmentor.io?ref=challenge)
